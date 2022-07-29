@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YourWeather</title>
+    <link rel="icon" type="image/x-icon" href="./img/favicon-32x32.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/f91d7ff047.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <form class="search">
+            <input type="text" placeholder="Search your city" name="search" class="search-input">
+            <button type="submit" class="search-button"><i class="fa fa-search search-icon"></i>Search</button>
+            <button class="current-city">Current</button>
+        </form>
+        <h1 class="city-title">Kharkiv</h1>
+        <p class="date"></p>
+        <p class="temp"><i class="fa-solid fa-cloud-sun current-weather"></i> <span class="change-temp">30</span>°<a
+                href="#" class="celsius">C</a>|<a href="#" class="fahrenheit">F</a></p>
+        <ul class="days">
+            <li>
+                <h2><i class="fa-solid fa-cloud-sun-rain icon-weather"></i>Tomorrow</h2>
+                <p>31 ° / <span>19 °</span></p>
+            </li>
+            <li>
+                <h2><i class="fa-solid fa-sun icon-weather"></i>Saturday</h2>
+                <p>33 ° / <span>22 °</span></p>
+            </li>
+            <li>
+                <h2><i class="fa-solid fa-sun icon-weather"></i> Sunday</h2>
+                <p>33 ° / <span>22 °</span></p>
+            </li>
+            <li>
+                <h2><i class="fa-solid fa-sun icon-weather"></i> Monday</h2>
+                <p>33 ° / <span>22 °</span></p>
+            </li>
+            <li>
+                <h2><i class="fa-solid fa-sun icon-weather"></i> Tuesday</h2>
+                <p>33 ° / <span>22 °</span></p>
+            </li>
+        </ul>
+
+        <p class="footer">Coded by Arina Hrushchenko</p>
+    </div>
+    <!-- <script src="./script.js" type="module"></script> -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./script2.js" type="module"></script>
+    <script src="./script3.js" type="module"></script>
+    <!-- <script src="./script4.js" type="module"></script> -->
+</body>
+
+</html>

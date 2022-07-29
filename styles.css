@@ -1,0 +1,124 @@
+body {
+  text-align: center;
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(./img/sky.jpg);
+  background-size: cover;
+  color: #fffbef;
+}
+p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #fffbef;
+}
+
+a:hover {
+  color: #fffbef;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  background-color: rgba(152, 176, 177, 0.5);
+  border-radius: 15px;
+}
+
+h1 {
+  color: #fffbef;
+  font-size: 34px;
+  margin: 0;
+  margin-top: 20px;
+}
+
+.current-weather {
+  height: 15px;
+  margin-right: 10px;
+}
+
+.icon-weather {
+  height: 10px;
+  margin-right: 10px;
+}
+
+h2 {
+  font-size: 24px;
+  margin: 0;
+}
+
+.title-img {
+  display: block;
+}
+
+.temp {
+  font-size: 34px;
+  margin: 0;
+}
+
+.temp span,
+.days span {
+  font-weight: bold;
+}
+
+li {
+  transition: all 200ms ease-in-out;
+  max-width: 400px;
+  margin: 0 auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+li:not(:last-child) {
+  border-bottom: 1px solid #fffbef;
+}
+
+/* search */
+.search {
+  max-width: 100%;
+  margin-top: 20px;
+}
+
+.search input {
+  width: 300px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  height: 43px;
+}
+
+.search-button,
+.current-city {
+  color: white;
+  background-color: rgba(152, 176, 177);
+  border: 1px solid rgba(152, 176, 177);
+  height: 43px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: 5px;
+  transition: all 200ms ease-in-out;
+}
+.current-city {
+  background-color: rgb(68, 158, 128);
+  border: 1px solid rgb(68, 158, 128);
+}
+.search-button:hover,
+.current-city:hover {
+  color: rgba(152, 176, 177);
+  background-color: white;
+  border: 1px solid rgba(152, 176, 177);
+  cursor: pointer;
+}
+.current-city:hover {
+  color: rgb(68, 158, 128);
+  border: 1px solid rgb(68, 158, 128);
+}
+.search-icon {
+  margin-right: 5px;
+}
