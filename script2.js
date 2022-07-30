@@ -7,6 +7,7 @@ const refs = {
   currentTemp: document.querySelector(".change-temp"),
   celsius: document.querySelector(".celsius"),
   fahrenheit: document.querySelector(".fahrenheit"),
+  tempTitle: document.querySelector(".temp"),
 };
 
 // _______________________Functions___________________
@@ -21,16 +22,88 @@ function search(city) {
 function onSearchCity(event) {
   event.preventDefault();
   const city = refs.inputSearchCity.value;
- 
+
   search(city);
   refs.inputSearchCity.value = "";
 }
 
 function displayCurrWeather(response) {
   setCurrentTemp(Math.round(response.data.main.temp));
-
   setCurrentCity(response.data.name);
+  if (refs.tempTitle.children.length === 3) {
+    setIcon(response.data.weather[0].description);
+    return;
+  } else {
+    refs.tempTitle.removeChild(refs.tempTitle.firstChild);
+    setIcon(response.data.weather[0].description);
+  }
 }
+
+function setIcon(description) {
+  switch (description) {
+    case "clear sky":
+      refs.tempTitle.insertAdjacentHTML(
+        "afterbegin",
+        '<svg class="current-weather"><use href="./img/symbol-defs.svg#icon-clear-sky"></use></svg>'
+      );
+      break;
+    case "few clouds":
+      refs.tempTitle.insertAdjacentHTML(
+        "afterbegin",
+        '<svg class="current-weather"><use href="./img/symbol-defs.svg#icon-few-clouds"></use></svg>'
+      );
+      break;
+    case "overcast clouds":
+      refs.tempTitle.insertAdjacentHTML(
+        "afterbegin",
+        '<svg class="current-weather"><use href="./img/symbol-defs.svg#icon-overcast-clouds"></use></svg>'
+      );
+      break;
+    case "scattered clouds":
+      refs.tempTitle.insertAdjacentHTML(
+        "afterbegin",
+        '<svg class="current-weather"><use href="./img/symbol-defs.svg#icon-scattered-clouds"></use></svg>'
+      );
+      break;
+    case "broken clouds":
+      refs.tempTitle.insertAdjacentHTML(
+        "afterbegin",
+        '<svg class="current-weather"><use href="./img/symbol-defs.svg#icon-broken-clouds"></use></svg>'
+      );
+      break;
+    case "shower rain":
+      refs.tempTitle.insertAdjacentHTML(
+        "afterbegin",
+        '<svg class="current-weather"><use href="./img/symbol-defs.svg#icon-shower-rain"></use></svg>'
+      );
+      break;
+    case "rain":
+      refs.tempTitle.insertAdjacentHTML(
+        "afterbegin",
+        '<svg class="current-weather"><use href="./img/symbol-defs.svg#icon-rain"></use></svg>'
+      );
+      break;
+    case "thunderstorm":
+      refs.tempTitle.insertAdjacentHTML(
+        "afterbegin",
+        '<svg class="current-weather"><use href="./img/symbol-defs.svg#icon-thunderstorm"></use></svg>'
+      );
+      break;
+    case "snow":
+      refs.tempTitle.insertAdjacentHTML(
+        "afterbegin",
+        '<svg class="current-weather"><use href="./img/symbol-defs.svg#icon-snow"></use></svg>'
+      );
+      break;
+    case "mist":
+      refs.tempTitle.insertAdjacentHTML(
+        "afterbegin",
+        '<svg class="current-weather"><use href="./img/symbol-defs.svg#icon-mist"></use></svg>'
+      );
+      break;
+  }
+}
+
 function setCurrentTemp(temperature) {
   refs.currentTemp.innerHTML = temperature;
 }

@@ -39,8 +39,10 @@ h1 {
 }
 
 .current-weather {
-  height: 15px;
+  width: 40px;
+  height: 40px;
   margin-right: 10px;
+  fill: currentColor;
 }
 
 .icon-weather {
