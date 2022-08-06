@@ -45,6 +45,11 @@ h1 {
   fill: currentColor;
 }
 
+.icon-git {
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
 .icon-weather {
   height: 10px;
   margin-right: 10px;
