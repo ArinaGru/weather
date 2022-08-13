@@ -12,7 +12,7 @@ const refs = {
   humidity: document.querySelector(".humidity"),
   description: document.querySelector(".description"),
 };
-
+let celsiusTemp = null;
 // _______________________Functions___________________
 function search(city) {
   axios
@@ -31,7 +31,8 @@ function onSearchCity(event) {
 }
 
 function displayCurrWeather(response) {
-  setCurrentTemp(Math.round(response.data.main.temp));
+  celsiusTemp = Math.round(response.data.main.temp);
+  setCurrentTemp(celsiusTemp);
   setCurrentHum(Math.round(response.data.main.humidity));
   setCurrentWind(Math.round(response.data.wind.speed * 3.6));
   setCurrentDesc(response.data.weather[0].description);
@@ -132,7 +133,7 @@ function setCurrentCity(city) {
 }
 
 refs.form.addEventListener("submit", onSearchCity);
-search("Kharkiv");
+
 // _________________axios_________________________
 
 function handlePosition(position) {
@@ -152,3 +153,22 @@ function getCurrentLocation(event) {
 }
 
 refs.buttonCurrent.addEventListener("click", getCurrentLocation);
+
+// --------------------Change Temp--------------
+const onTempCelsius = (e) => {
+  e.preventDefault();
+  setCurrentTemp(celsiusTemp);
+  refs.celsius.classList.add("active");
+  refs.fahrenheit.classList.remove("active");
+};
+
+const onTempFahrenheit = (e) => {
+  e.preventDefault();
+  refs.currentTemp.innerHTML = (celsiusTemp * 9) / 5 + 32;
+    refs.celsius.classList.remove("active");
+    refs.fahrenheit.classList.add("active");
+};
+refs.celsius.addEventListener("click", onTempCelsius);
+refs.fahrenheit.addEventListener("click", onTempFahrenheit);
+
+search("Kharkiv");
