@@ -8,6 +8,9 @@ const refs = {
   celsius: document.querySelector(".celsius"),
   fahrenheit: document.querySelector(".fahrenheit"),
   tempTitle: document.querySelector(".temp"),
+  wind: document.querySelector(".wind"),
+  humidity: document.querySelector(".humidity"),
+  description: document.querySelector(".description"),
 };
 
 // _______________________Functions___________________
@@ -29,7 +32,11 @@ function onSearchCity(event) {
 
 function displayCurrWeather(response) {
   setCurrentTemp(Math.round(response.data.main.temp));
+  setCurrentHum(Math.round(response.data.main.humidity));
+  setCurrentWind(Math.round(response.data.wind.speed * 3.6));
+  setCurrentDesc(response.data.weather[0].description);
   setCurrentCity(response.data.name);
+
   if (refs.tempTitle.children.length === 3) {
     setIcon(response.data.weather[0].description);
     return;
@@ -106,6 +113,18 @@ function setIcon(description) {
 
 function setCurrentTemp(temperature) {
   refs.currentTemp.innerHTML = temperature;
+}
+
+function setCurrentHum(humidity) {
+  refs.humidity.innerHTML = humidity;
+}
+
+function setCurrentWind(wind) {
+  refs.wind.innerHTML = wind;
+}
+
+function setCurrentDesc(description) {
+  refs.description.innerHTML = description;
 }
 
 function setCurrentCity(city) {

@@ -40,11 +40,14 @@ ul {
   margin-right: auto;
 }
 
+.city-container {
+  margin-top: 20px;
+}
+
 h1 {
   color: #fffbef;
   font-size: 34px;
   margin: 0;
-  margin-top: 20px;
 }
 
 .current-weather {
