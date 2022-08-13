@@ -114,6 +114,8 @@ function setIcon(description) {
 
 function setCurrentTemp(temperature) {
   refs.currentTemp.innerHTML = temperature;
+  refs.celsius.classList.add("active");
+  refs.fahrenheit.classList.remove("active");
 }
 
 function setCurrentHum(humidity) {
@@ -158,15 +160,13 @@ refs.buttonCurrent.addEventListener("click", getCurrentLocation);
 const onTempCelsius = (e) => {
   e.preventDefault();
   setCurrentTemp(celsiusTemp);
-  refs.celsius.classList.add("active");
-  refs.fahrenheit.classList.remove("active");
 };
 
 const onTempFahrenheit = (e) => {
   e.preventDefault();
   refs.currentTemp.innerHTML = (celsiusTemp * 9) / 5 + 32;
-    refs.celsius.classList.remove("active");
-    refs.fahrenheit.classList.add("active");
+  refs.celsius.classList.remove("active");
+  refs.fahrenheit.classList.add("active");
 };
 refs.celsius.addEventListener("click", onTempCelsius);
 refs.fahrenheit.addEventListener("click", onTempFahrenheit);
