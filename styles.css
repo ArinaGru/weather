@@ -9,26 +9,41 @@ body {
   background-size: cover;
   color: #fffbef;
 }
+
 p {
   margin: 0;
 }
 
 a {
   text-decoration: none;
-  color: rgb(68, 158, 128);
+  color: #fffbef;
 }
 
 a:hover {
+  color: #fffbef;
+}
+
+.celsius,
+.fahrenheit {
+  font-weight: bold;
+  color: rgb(68, 158, 128);
+  text-shadow: 2px 2px 4px #ffffff;
+}
+
+.celsius:hover,
+.fahrenheit:hover {
   color: rgb(68, 158, 128);
 }
 
 .active {
+  font-weight: 400;
   color: #fffbef;
+  text-shadow: none;
 }
 
 .active:hover {
-  color: #fffbef;
   cursor: context-menu;
+  color: #fffbef;
 }
 
 ul {
@@ -88,6 +103,9 @@ h2 {
 .temp {
   font-size: 34px;
   margin: 0;
+  padding: 10px;
+  background-color: rgba(93, 108, 109, 0.5);
+  border-radius: 15px;
 }
 
 .temp span,
