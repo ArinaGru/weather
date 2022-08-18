@@ -1,5 +1,5 @@
 const now = new Date();
-const days = [
+export const days = [
   "Sunday",
   "Monday",
   "Tuesday",

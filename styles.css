@@ -1,12 +1,15 @@
 body {
+
   text-align: center;
-  background-image: linear-gradient(
+  background-color: rgba(47, 48, 58, 0.4);
+  /* background-image: linear-gradient(
       to right,
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
     ),
-    url(./img/sky.jpg);
+    url(./img/sky.jpg); */
   background-size: cover;
+  background-repeat: no-repeat;
   color: #fffbef;
 }
 
@@ -26,13 +29,13 @@ a:hover {
 .celsius,
 .fahrenheit {
   font-weight: bold;
-  color: rgb(68, 158, 128);
+  color: rgb(219, 106, 41);
   text-shadow: 2px 2px 4px #ffffff;
 }
 
 .celsius:hover,
 .fahrenheit:hover {
-  color: rgb(68, 158, 128);
+  color: rgb(219, 106, 41);
 }
 
 .active {
@@ -51,7 +54,7 @@ ul {
   padding: 0;
   margin-top: 30px;
   margin-bottom: 30px;
-  background-color: rgba(152, 176, 177, 0.5);
+  background-color: rgba(54, 52, 51, 0.5);
   border-radius: 15px;
 }
 
@@ -59,7 +62,7 @@ ul {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: 515px;
+  max-width: 515px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -104,7 +107,7 @@ h2 {
   font-size: 34px;
   margin: 0;
   padding: 10px;
-  background-color: rgba(93, 108, 109, 0.5);
+  background-color: rgba(54, 52, 51, 0.5);
   border-radius: 15px;
 }
 
@@ -142,28 +145,29 @@ li:not(:last-child) {
 .search-button,
 .current-city {
   color: white;
-  background-color: rgba(152, 176, 177);
-  border: 1px solid rgba(152, 176, 177);
+  background-color: rgba(54, 52, 51, 0.5);
+  border: 1px solid rgba(54, 52, 51, 0.5);
   height: 43px;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: 5px;
+  margin-top: 15px;
   transition: all 200ms ease-in-out;
 }
 .current-city {
-  background-color: rgb(68, 158, 128);
-  border: 1px solid rgb(68, 158, 128);
+  background-color: rgb(219, 106, 41);
+  border: 1px solid rgb(219, 106, 41);
 }
 .search-button:hover,
 .current-city:hover {
-  color: rgba(152, 176, 177);
+  color: rgba(54, 52, 51, 0.5);
   background-color: white;
-  border: 1px solid rgba(152, 176, 177);
+  border: 1px solid rgba(54, 52, 51, 0.5);
   cursor: pointer;
 }
 .current-city:hover {
-  color: rgb(68, 158, 128);
-  border: 1px solid rgb(68, 158, 128);
+  color: rgb(219, 106, 41);
+  border: 1px solid rgb(219, 106, 41);
 }
 .search-icon {
   margin-right: 5px;
